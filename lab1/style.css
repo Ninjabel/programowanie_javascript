@@ -1,0 +1,15 @@
+#pojemnikiPojemnik {
+    width: fit-content;
+    margin: auto;
+    border: 2px solid rgb(148, 135, 135);
+    padding: 5px;
+}
+
+#pojemnikiPojemnik > * {
+    width: 200px;
+    display: block;
+    margin-bottom: 5px;
+}
+.wynikiText {
+    font-weight: 900;
+}
