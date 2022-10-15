@@ -1,22 +1,68 @@
-#slider {
-    width: 600px;
-    height: 400px;
-    margin: 100px auto 0 auto;
-    overflow: hidden;
+body {
+    background-color: rgb(0, 0, 0);
 }
-#slider .slides {
+.btn-ss-con {
+    width: 800px;
+    height: 70px;
+    margin: 20px auto;
     display: flex;
-    animation-name: pociag-w-lewo;
-    animation-duration: 4s;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
+    user-select: none;
 }
-
-@keyframes pociag-w-lewo {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-2000px);
-    }
+#btn-ss {
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-size: 33px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: ease-in-out 50ms;
+}
+#btn-ss:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px 0px white;
+}
+#slider {
+    width: 800px;
+    height: 500px;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
+    box-shadow: 0 0 7px 2px white;
+    border-radius: 10px;
+}
+.slides > img {
+    width: 800px;
+}
+.slides {
+    display: flex;
+    transition: ease-in-out 1.2s;
+}
+.slider-buttons-con {
+    width: 800px;
+    height: 50px;
+    margin: 20px auto;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-evenly;
+    user-select: none;
+}
+.slider-buttons-con > div {
+    width: 100px;
+    height: 50px;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: ease-in-out 50ms;
+}
+.slider-buttons-con > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px 0px white;
 }
