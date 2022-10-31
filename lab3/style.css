@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+}
+p {
+    color: white;
+    font-size: 36px;
+}
+.buttons-con {
+    width: fit-content;
+    margin: auto;
+}

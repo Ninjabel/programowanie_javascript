@@ -1,34 +1,54 @@
+document.addEventListener('keypress', (event) => {
+    playSound(event.key);
+});
 
-// notatnik 
-document.addEventListener('keypress', onKeyPress)
+function playSound(key) {
+    switch (key) {
+        case '1':
+            var boom = new Audio('sounds/boom.wav');
+            boom.play();
+            break;
 
-const KeyToSound = {
-    'a': 's1',
-    's': 's2',
-}
-function onKeyPress(ev) {
-    // const key = event.key
-    // logika mapowania key -> sound
-    const sound = KeyToSound[ev.key]
-    // switch (ev.key) {
-    //     case 'a':
-    //         sound = SOUND.clap
-    //         // clap
-    //         break;
-    //     case 's':
-    //         sound = SOUND.hihat
-    //         // hihat
-    //         break;
-    // }
-    playSound(sound)
-}
+        case '2':
+            var clap = new Audio('sounds/clap.wav');
+            clap.play();
+            break;
 
-function playSound(sound) {
-    if (!sound) {
-        return
+        case '3':
+            var hihat = new Audio('sounds/hihat.wav');
+            hihat.play();
+            break;
+
+        case '4':
+            var kick = new Audio('sounds/kick.wav');
+            kick.play();
+            break;
+
+        case '5':
+            var openhat = new Audio('sounds/openhat.wav');
+            openhat.play();
+            break;
+
+        case '6':
+            var ride = new Audio('sounds/ride.wav');
+            ride.play();
+            break;
+
+        case '7':
+            var snare = new Audio('sounds/snare.wav');
+            snare.play();
+            break;
+        case '8':
+            var tink = new Audio('sounds/tink.wav');
+            tink.play();
+            break;
+
+        case '9':
+            var tom = new Audio('sounds/tom.wav');
+            tom.play();
+            break;
+
+        default:
+            console.log(key);
     }
-    const audioTag = document.querySelector(`#${clap}`)
-    audioTag.currentTime = 0
-    audioTag.play()
 }
-// Date.now()
