@@ -5,8 +5,7 @@ function onDeviceMove(event) {
 }
 
 function animate() {
-    //    console.log(Date.now())
-    // requestAnimationFrame(animate)
+    requestAnimationFrame(animate)
 }
 
 requestAnimationFrame(animate)

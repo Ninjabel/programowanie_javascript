@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+#garden {
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    background-color: rgb(10, 89, 32);
+    border: 3px solid grey;
+}
+#hole > img {
+    width: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#ball > img {
+    width: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 10%;
+}
