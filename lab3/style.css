@@ -9,3 +9,17 @@ p {
     width: fit-content;
     margin: auto;
 }
+#recordings {
+    width: 1280px;
+    margin: auto;
+    text-align: center;
+}
+#btn-start-recording {
+    color: white;
+    font-size: 40px;
+    border: 1px solid white;
+    width: fit-content;
+    padding: 0 20px;
+    border-radius: 10px;
+    margin: auto;
+}

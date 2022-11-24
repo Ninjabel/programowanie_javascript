@@ -1,5 +1,9 @@
+const btnStartRecording = document.getElementById("btn-start-recording");
+//let timer = 
+
 document.addEventListener('keypress', (event) => {
     playSound(event.key);
+    startRecording(event.key);
 });
 
 function playSound(key) {
@@ -50,5 +54,12 @@ function playSound(key) {
 
         default:
             console.log(key);
+    }
+}
+function startRecording(key) {
+    if (key == ' ') {
+        // space 
+        btnStartRecording.style.boxShadow = "0 0 10px 1px white";
+
     }
 }
