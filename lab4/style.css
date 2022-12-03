@@ -1,0 +1,94 @@
+body {
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: #eee;
+}
+.no-outline:focus {
+    outline: none;
+}
+
+#notepad-window {
+    width: 500px;
+    height: 700px;
+    border: 2px solid white;
+    margin: auto;
+}
+.add-note-bttn {
+    width: 90%;
+    height: 100px;
+    margin: 20px auto 30px;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.notes-container {
+    width: 90%;
+    height: 525px;
+    border: 1px solid grey;
+    margin: auto;
+}
+.notes-container-text {
+    color: grey;
+    text-align: center;
+}
+
+
+.create-note-window {
+    background-color: black;
+}
+.note-title-con {
+    display: flex;
+    width: 90%;
+    height: 100px;
+    margin: 20px auto 30px;
+    border: 1px solid grey;
+}
+.title-input {
+    display: block;
+    width: 95%;
+    height: 55px;
+    font-size: 36px;
+    color: white;
+    background-color: black;
+    margin: auto;
+}
+.title-input::selection {
+    background-color: grey;
+}
+.note-description-textarea {
+    background-color: black;
+    color: white;
+    border-bottom: none;
+    width: 97%;
+    height: 443px;
+    resize: none;
+    font-size: 20px;
+    border: none;
+    margin-left: 7px;
+    margin-top: 2px;
+}
+.note-description-textarea::selection {
+    background-color: grey;
+}
+.save-note-btn {
+    display: block;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+    border: 3px solid rgb(0, 69, 0);
+    font-size: 36px;
+    margin-top: 22px;
+}
