@@ -32,6 +32,16 @@ input {
     cursor: pointer;
     user-select: none;
 }
+.plus-svg {
+    width: 50px;
+    height: 50px;
+    filter: contrast(100%);
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+.plus-svg img {
+    filter: invert(100%) brightness(60%);
+}
 .colors-container {
     width: 90%;
     height: 20px;
@@ -45,31 +55,31 @@ input {
     border: 1px solid grey;
     cursor: pointer;
 }
-#color1 {
+.color:nth-child(1) {
  background-color: red;
 }
-#color2 {
+.color:nth-child(2) {
     background-color: orange;
 }
-#color3 {
+.color:nth-child(3) {
     background-color: yellow;
 }
-#color4 {
+.color:nth-child(4) {
     background-color: yellowgreen;
 }
-#color5 {
+.color:nth-child(5) {
     background-color: cadetblue;
 }
-#color6 {
+.color:nth-child(6) {
     background-color: blue;
 }
-#color7 {
+.color:nth-child(7) {
     background-color: blueviolet;
 }
-#color8 {
+.color:nth-child(8) {
     background-color: violet;
 }
-#color9 {
+.color:nth-child(9) {
     background-color: white;
 }
 
@@ -83,6 +93,70 @@ input {
     color: grey;
     text-align: center;
     user-select: none;
+    margin: 8px auto 0;
+}
+.note {
+    width: 95%;
+    height: 70px;
+    border: 1px solid grey;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    user-select: none;
+}
+.pin-note-bttn {
+    width: 30px;
+    height: 50px;
+    background-color: rgb(194, 153, 0);
+    cursor: pointer;
+}
+.pin-note-bttn img {
+    margin-top: 10px;
+}
+.note-short-title {
+    border: 1px solid grey;
+    width: 60%;
+    height: 60px;
+    overflow-wrap: break-word;
+    padding: 5px;
+    cursor: pointer;
+    color: #eee;
+}
+.note-short-title p {
+    margin: 0;
+}
+.date {
+    text-align: center;
+    font-size: 12px;
+}
+.note-edit-bttn {
+    border: 3px solid rgb(0, 62, 1);
+    width: 40px;
+    height: 40px;
+    background-color: rgb(0, 105, 0);
+    overflow: hidden;
+    cursor: pointer;
+}
+.note-edit-bttn img{
+    width: 25px;
+    filter: invert(49%) sepia(15%) saturate(7478%) hue-rotate(88deg) brightness(30%) contrast(112%);
+    margin-top: 7px;
+    margin-left: 6px;
+}
+.note-delete-bttn {
+    border: 3px solid rgb(73, 0, 0);
+    width: 40px;
+    height: 40px;
+    background-color: rgb(115, 0, 0);
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+.note-delete-bttn img{
+    width: 55px;
+    filter: invert(8%) sepia(39%) saturate(6876%) hue-rotate(331deg) brightness(50%) contrast(106%);
 }
 
 
@@ -113,7 +187,7 @@ input {
     color: white;
     border-bottom: none;
     width: 97%;
-    height: 443px;
+    height: 430px;
     resize: none;
     font-size: 20px;
     border: none;
