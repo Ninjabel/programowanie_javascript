@@ -1,32 +1,30 @@
 body {
-    background-color: black;
-    margin: 0;
+  margin: 0;
 }
-#garden {
-    margin: auto;
-    width: 90vw;
-    height: 90vh;
-    background-color: rgb(10, 89, 32);
-    border: 3px solid grey;
+#board {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
 }
-#hole {
-    border-radius: 100%;
-    overflow: hidden;
-}
-#hole > img {
-    width: 70px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
+  
 #ball {
-    border-radius: 100%;
-    overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
 }
-#ball > img {
-    width: 50px;
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-    left: 10%;
+  
+#hole {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
 }
+  
+#scoreboard {
+  width: 500px;
+  margin: 20px auto;
+  text-align: center;
+} 
