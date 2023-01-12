@@ -1,14 +1,16 @@
 var board = document.getElementById("board");
 var ball = document.getElementById("ball");
 var hole = document.getElementById("hole");
+const timer = document.getElementById("timer");
 var scoreboard = document.getElementById("scoreboard");
+var seconds = 0;
 var holeX = 250;
 var holeY = 250;
 var ballX = 250;
 var ballY = 250;
 var speedX = 0;
 var speedY = 0;
-var score = 0;
+var score = -1;
 var startTime;
 var endTime;
 
@@ -27,9 +29,14 @@ function handleOrientation(event) {
   var y = event.gamma;
 
   // Prędkość kulki na podstawie beta i gamma
-  speedX = -x;
-  speedY = y;
+  speedX = -x * 0.1;
+  speedY = y * 0.1;
 }
+  // Timer
+function time() {
+let interval = setInterval(() => {timer.innerHTML = `Czas: ${seconds++}`} ,1000);
+}
+time();
 
 startTime = Date.now();
 requestAnimationFrame(animate);
@@ -64,15 +71,16 @@ function animate() {
   if (Math.abs(ballX - holeX) < 20 && Math.abs(ballY - holeY) < 20) {
 
     score++;
+    seconds = 0;
 
-    if (score === 5) {
+    if (score == 5) {
       endTime = Date.now();
       var totalTime = (endTime - startTime) / 1000;
       alert("Gratulacje! Ukończyłeś grę w czasie " + totalTime + " sekund.");
       var userName = prompt("Podaj swoją nazwę.");
 
       // Zapisywanie wyniku do localStorage
-      if (localStorage.getItem("scores") === null) {
+      if (localStorage.getItem("scores") == null) {
         localStorage.setItem("scores", `${userName}: ${totalTime}s`);
       } else {
         var currentScores = localStorage.getItem("scores");
@@ -80,13 +88,13 @@ function animate() {
       }
       // Tabela wyników
       var scores = localStorage.getItem("scores");
-      scoreboard.innerHTML = `<h2>Top Scores</h2> <p> ${scores} </p>`;
+      scoreboard.innerHTML = `<h2>Najlepsze Wyniki:</h2> <p> ${scores} </p>`;
       return;
     }
 
     // Losowanie nowego położenia diury
-    holeX = Math.random() * 470;
-    holeY = Math.random() * 470;
+    holeX = Math.random() * 450;
+    holeY = Math.random() * 450;
     hole.style.left = holeX + "px";
     hole.style.top = holeY + "px";
 
