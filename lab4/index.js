@@ -33,13 +33,13 @@ function displayNotes() {
   let notesList = document.getElementById('notes-list');
   notesList.innerHTML = '';
 
-  // Dla każdej notatki z tablicy notatek
+  // dla każdej notatki z tablicy notatek
   for (let i = 0; i < notes.length; i++) {
     let note = notes[i];
 
     let noteDiv = document.createElement('div');
     noteDiv.classList.add('note');
-    // Pin
+    // pin
     if (note.pin) {
       noteDiv.classList.add('pinned');
     }
@@ -53,7 +53,7 @@ function displayNotes() {
     contentDiv.classList.add('note-content');
     contentDiv.innerText = note.content;
 
-    // Przyciski
+    // przyciski
     let deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
     deleteButton.innerText = 'Usuń';
@@ -68,19 +68,19 @@ function displayNotes() {
     togglePin(i);
     });
 
-    // Data
+    // data
     let dateDiv = document.createElement('div');
     dateDiv.classList.add('note-date');
     dateDiv.innerText = note.date;
 
-    // Wszystkie elementy do jednego diva
+    // wszystkie elementy do jednego diva
     noteDiv.appendChild(titleDiv);
     noteDiv.appendChild(contentDiv);
     noteDiv.appendChild(deleteButton);
     noteDiv.appendChild(pinButton);
     noteDiv.appendChild(dateDiv);
 
-    // Dodaj notatki do listy notatek na stronie
+    // dodaj notatki do listy notatek na stronie
     notesList.appendChild(noteDiv);
 
   }
@@ -109,8 +109,7 @@ let contentInput = document.getElementById('content-input');
 let colorInput = document.getElementById('color-input');
 let pinInput = document.getElementById('pin-input');
 
-form.addEventListener('submit', function(event) {
-event.preventDefault();
+form.addEventListener('submit', function() {
 
 let title = titleInput.value;
 let content = contentInput.value;
@@ -120,7 +119,7 @@ let pin = pinInput.checked;
 addNote(title, content, color, pin);
 displayNotes();
 
-// Czyszczenie formularza
+// czyszczenie formularza
 titleInput.value = '';
 contentInput.value = '';
 colorInput.value = '#FFFFFF';

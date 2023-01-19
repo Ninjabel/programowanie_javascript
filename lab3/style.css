@@ -1,25 +1,62 @@
 body {
-    background-color: black;
-}
-p {
+    background-image: url(/img/new-york.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 97vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
     color: white;
-    font-size: 36px;
+    user-select: none;
 }
-.buttons-con {
-    width: fit-content;
-    margin: auto;
+#keys-con {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #00000084;
 }
-#recordings {
-    width: 1280px;
-    margin: auto;
-    text-align: center;
-}
-#btn-start-recording {
-    color: white;
-    font-size: 40px;
+.key {
+    width: 100px;
+    height: 100px;
     border: 1px solid white;
-    width: fit-content;
-    padding: 0 20px;
-    border-radius: 10px;
-    margin: auto;
+    background-color: #000000ad;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s;
+}
+.letter {
+    font-size: 40px;
+    line-height: 36px;
+    font-weight: 500;
+}
+.sound {
+    line-height: 0px;
+    font-weight: 100;
+}
+.playing {
+    border: 1px solid orange;
+    color: orange;
+    box-shadow: 0 0 3px 1px orange;
+    transform: scale(1.1);
+}
+.recordings-con {
+    width: 100px;
+    height: 150px;
+    background-color: #0000009d;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.rec-btn {
+    width: 70px;
+    height: 50px;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
 }
