@@ -66,17 +66,29 @@ function gathering(e) {
     }
 }
 
+let currentAudio;
 function playRecording() {
     console.log('playing...');
     let previousKeyTime = pressedKeys[0].keyTime;
-    pressedKeys.forEach(key => {
+    let i = 0;
+    function playNext() {
+        if (i >= pressedKeys.length) return;
+        let key = pressedKeys[i];
         let delay = key.keyTime - previousKeyTime;
-        setTimeout(() => {
-            console.log(key.keyCode);
-            let audio = document.querySelector(`audio[data-key="${key.keyCode}"]`);
-            if (!audio) return;
-            audio.play();
+        setTimeout(function() {
+            if(currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+            currentAudio = document.querySelector(`audio[data-key="${key.keyCode}"]`);
+            if (!currentAudio) return;
+            currentAudio.play();
+            previousKeyTime = key.keyTime;
+            i++;
+            playNext();
         }, delay);
-        previousKeyTime = key.keyTime;
-    });
+    }
+    playNext();
 }
+
+
